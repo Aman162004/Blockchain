@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+@theme {
+  --color-brand-50: #f3f7ff;
+  --color-brand-100: #e5efff;
+  --color-brand-200: #cddbff;
+  --color-brand-300: #a8c0ff;
+  --color-brand-400: #7a9aff;
+  --color-brand-500: #5775ff;
+  --color-brand-600: #3b51ff;
+  --color-brand-700: #2f3fe6;
+  --color-brand-800: #2633ba;
+  --color-brand-900: #1f2a96;
+  --color-neon: #00F0FF;
+  --color-darkbg: #0b1020;
+  --color-darkcard: #101736;
+  --shadow-glow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+:root { color-scheme: dark; }
+
+body { @apply bg-darkbg text-white antialiased; }
+
+.bg-grid {
+  background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.card-glass { @apply bg-darkcard/70 backdrop-blur-xl border border-white/10 shadow-glow rounded-2xl; }
